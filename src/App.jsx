@@ -130,7 +130,7 @@ const App = () => {
           <h1 className="website-title">
             <span className="text-gradient">Movie</span>Matrix
           </h1>
-          <img src='public/hero-img.png' alt='Hero Banner'/>
+          <img src='/hero-img.png' alt='Hero Banner'/>
           <h1>Find <span className='text-gradient'>Movies</span> You'll Enjoy Without the Hassle</h1>
         </header>
 
