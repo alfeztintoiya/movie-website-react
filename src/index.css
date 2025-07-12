@@ -43,6 +43,12 @@
     @apply sm:mt-10 mt-5;
   }
 
+  .website-title {
+    @apply text-6xl sm:text-7xl lg:text-8xl font-bold text-center mb-6 text-white;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+  }
+
   header img {
     @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
   }
@@ -65,7 +71,7 @@
     }
 
     & ul li {
-      @apply min-w-[230px] flex flex-row items-center;
+      @apply min-w-[230px] flex flex-row items-center cursor-pointer hover:opacity-80 transition-opacity;
     }
 
     & ul li p {
@@ -102,7 +108,7 @@
   }
 
   .movie-card {
-    @apply bg-dark-100 p-5 rounded-2xl shadow-inner shadow-light-100/10;
+    @apply bg-dark-100 p-5 rounded-2xl shadow-inner shadow-light-100/10 cursor-pointer transition-transform hover:scale-105;
 
     & img {
       @apply rounded-lg h-auto w-full;
@@ -139,6 +145,127 @@
     & .content .year {
       @apply text-gray-100 font-medium text-base;
     }
+  }
+
+  .movie-details-overlay {
+    @apply fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  }
+
+  .movie-details-modal {
+    @apply bg-dark-100 rounded-2xl max-w-4xl w-full max-h-[85vh] overflow-y-auto relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .close-button {
+    @apply absolute top-4 right-4 text-white text-3xl font-bold z-10 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 hover:bg-black/70 transition-colors;
+  }
+
+  .movie-details-content {
+    @apply flex flex-col lg:flex-row gap-4 p-5;
+  }
+
+  .movie-details-loading {
+    @apply flex flex-col items-center justify-center py-20 px-5 space-y-4;
+  }
+
+  .movie-details-loading p {
+    @apply text-white text-lg font-medium;
+  }
+
+  .movie-poster-section {
+    @apply flex-shrink-0;
+  }
+
+  .movie-poster-large {
+    @apply w-full lg:w-64 rounded-lg object-cover;
+  }
+
+  .movie-info-section {
+    @apply flex-1 space-y-4;
+  }
+
+  .movie-header {
+    @apply space-y-3;
+  }
+
+  .movie-title {
+    @apply text-2xl lg:text-3xl font-bold text-white leading-tight;
+  }
+
+  .movie-meta {
+    @apply flex items-center gap-2 text-gray-100;
+  }
+
+  .year {
+    @apply font-medium;
+  }
+
+  .rating-badge {
+    @apply bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold;
+  }
+
+  .duration {
+    @apply font-medium;
+  }
+
+  .movie-rating {
+    @apply flex items-center gap-2;
+  }
+
+  .movie-rating img {
+    @apply w-5 h-5;
+  }
+
+  .rating-score {
+    @apply text-white font-bold text-lg;
+  }
+
+  .rating-count {
+    @apply text-gray-100;
+  }
+
+  .like-count {
+    @apply text-gray-100 ml-4;
+  }
+
+  .movie-genres {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .genre-tag {
+    @apply bg-light-100/10 text-white px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .movie-details-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+
+  .detail-section {
+    @apply space-y-2;
+  }
+
+  .detail-section h3 {
+    @apply text-white font-bold text-lg;
+  }
+
+  .detail-section p {
+    @apply text-gray-100 leading-relaxed;
+  }
+
+  .production-companies {
+    @apply md:col-span-2;
+  }
+
+  .companies-list {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .company {
+    @apply bg-light-100/10 text-white px-3 py-1 rounded-full text-sm;
+  }
+
+  .visit-homepage {
+    @apply bg-gradient-to-r from-[#D6C7FF] to-[#AB8BFF] text-black px-6 py-3 rounded-lg font-bold hover:opacity-90 transition-opacity;
   }
 }
 
