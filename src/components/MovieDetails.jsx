@@ -57,7 +57,7 @@ const MovieDetails = ({ movie, onClose, isLoading }) => {
               </div>
               
               <div className="movie-rating">
-                <img src="public/Rating.svg" alt="star" />
+                <img src="/Rating.svg" alt="star" />
                 <span className="rating-score">{movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A'}</span>
                 <span className="rating-count">({movie.vote_count || 0})</span>
               </div>
