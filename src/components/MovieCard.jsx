@@ -13,7 +13,7 @@ const MovieCard = ({ movie, onMovieClick }) => {
 
             <div className='content'>
                 <div className='rating'>
-                    <img src='public/Rating.svg' alt='star icon' />
+                    <img src='/Rating.svg' alt='star icon' />
                     <p>{vote_average ? vote_average.toFixed(1) : 'N/A'}</p>
                 </div>
 
