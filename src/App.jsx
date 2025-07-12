@@ -34,7 +34,7 @@ const App = () => {
       }
 
       const data = await response.json();
-      if(data.response=='false'){
+      if(data.response=="false"){
         throw new Error('No movies found');
         setMoviesList([]);
         return;
